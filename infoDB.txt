@@ -1,3 +1,0 @@
-database_user. 
-user: mern_user
-pw: IOlqxLGD7qBF9E8K
