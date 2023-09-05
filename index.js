@@ -23,6 +23,9 @@ app.use(express.json());
 app.use("/api/auth", require("./routes/auth"));
 // CRUD:Events
 app.use("/api/events", require("./routes/events"));
+app.get("*", (req, res) => {
+  res.sendFile(__dirname + "/public/index.html");
+});
 
 // listen request
 app.listen(process.env.PORT, () => {
