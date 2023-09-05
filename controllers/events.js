@@ -38,7 +38,7 @@ const updateEvent = async (req, res = response) => {
         msg: "Event not found",
       });
     }
-    console.log(event.user.toString(), "  =  ", req.uid);
+    // console.log(event.user.toString(), "  =  ", req.uid);
     if (event.user.toString() !== req.uid) {
       return res.status(401).json({
         ok: false,

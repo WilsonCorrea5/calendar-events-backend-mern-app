@@ -12,7 +12,6 @@ const jwtValidator = (req, res = response, next) => {
   }
   try {
     const payload = jsonwebtoken.verify(token, process.env.SECRET_JWT_SEED);
-    console.log(`jwt-validation: active user is: ${payload.name}`);
     req.uid = payload.uid;
     req.name = payload.name;
   } catch (error) {
